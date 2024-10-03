@@ -5,13 +5,13 @@ pipeline {
 	    GITHUB_REPO_URL =  'https://github.com/BenMessGHF/cicd-testing-java-cours'  }
 
     tools {
-        maven 'maven'
+        maven 'Maven'
     }
 
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: "${env.GITHUB_REPO_URL}"
+                git branch: 'm1ch1_OK', url: "${env.GITHUB_REPO_URL}"
             }
         }
         
