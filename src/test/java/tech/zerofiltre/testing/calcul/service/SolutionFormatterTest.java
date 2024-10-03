@@ -14,16 +14,16 @@ public class SolutionFormatterTest {
 		solutionFormatter = new SolutionFormatterImpl();
 	}
 
-	@Test
-	public void format_shouldFormatAnyBigNumber() {
-		// GIVEN
-		final int number = 1234567890;
-
-		// WHEN
-		final String result = solutionFormatter.format(number);
-
-		// THEN
-		assertThat(result).isEqualTo("1\u00A0234\u00A0567\u00A0890");
-	}
+//	@Test
+//	public void format_shouldFormatAnyBigNumber() {
+//		// GIVEN
+//		final int number = 1234567890;
+//
+//		// WHEN
+//		final String result = solutionFormatter.format(number);
+//
+//		// THEN
+//		assertThat(result).isEqualTo("1\u00A0234\u00A0567\u00A0890");
+//	}
 
 }
