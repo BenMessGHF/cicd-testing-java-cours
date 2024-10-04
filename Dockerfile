@@ -21,6 +21,9 @@ RUN apt-get clean && rm -rf /var/lib/apt/lists/*
 # Ajouter l'utilisateur Jenkins au groupe docker
 RUN groupadd -f docker && usermod -aG docker jenkins
 
+# Installer Sudo
+RUN apt-get update && apt-get install -y sudo
+
 # Revenir à l'utilisateur Jenkins
 USER jenkins
 
