@@ -1,5 +1,10 @@
 pipeline {
-    agent any
+    agent {
+            docker {
+                image 'docker:19.03'  // Image Docker officielle avec Docker préinstallé
+                args '-v /var/run/docker.sock:/var/run/docker.sock'  // Montez le socket Docker de l'hôte pour l'utiliser à l'intérieur du conteneur
+            }
+        }
     environment { 
 	    DOCKER_USERNAME =  'bigben29'
 	    GITHUB_REPO_URL =  'https://github.com/BenMessGHF/cicd-testing-java-cours'  }
